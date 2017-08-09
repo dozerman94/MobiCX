@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720F9C04EF1D819895A1ABDC /* Pods_MobiCX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3409C5761D5BFFCB8B53FA6 /* Pods_MobiCX.framework */; };
 		C584A3A21F36788C00B08C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584A3A11F36788C00B08C93 /* AppDelegate.swift */; };
 		C584A3A41F36788C00B08C93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584A3A31F36788C00B08C93 /* ViewController.swift */; };
 		C584A3A71F36788C00B08C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C584A3A51F36788C00B08C93 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 		C584A3D21F36792200B08C93 /* .git in Resources */ = {isa = PBXBuildFile; fileRef = C584A3CF1F36792200B08C93 /* .git */; };
 		C584A3D31F36792200B08C93 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C584A3D01F36792200B08C93 /* .gitignore */; };
 		C584A3D41F36792200B08C93 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C584A3D11F36792200B08C93 /* README.md */; };
+		C584A3D81F36821F00B08C93 /* APICommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584A3D71F36821F00B08C93 /* APICommunicator.swift */; };
+		C584A3DA1F3688A400B08C93 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C584A3D91F3688A400B08C93 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7DCC59B74517F721BCFE1025 /* Pods-MobiCX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiCX.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobiCX/Pods-MobiCX.release.xcconfig"; sourceTree = "<group>"; };
+		B91D2A1DF58666CADA6C328D /* Pods-MobiCX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiCX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobiCX/Pods-MobiCX.debug.xcconfig"; sourceTree = "<group>"; };
 		C584A39E1F36788C00B08C93 /* MobiCX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobiCX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C584A3A11F36788C00B08C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C584A3A31F36788C00B08C93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +58,9 @@
 		C584A3CF1F36792200B08C93 /* .git */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .git; sourceTree = "<group>"; };
 		C584A3D01F36792200B08C93 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C584A3D11F36792200B08C93 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C584A3D71F36821F00B08C93 /* APICommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICommunicator.swift; sourceTree = "<group>"; };
+		C584A3D91F3688A400B08C93 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		E3409C5761D5BFFCB8B53FA6 /* Pods_MobiCX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobiCX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720F9C04EF1D819895A1ABDC /* Pods_MobiCX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +89,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14F251CB66CAB690C9903DA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3409C5761D5BFFCB8B53FA6 /* Pods_MobiCX.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CCED96B875C522CD12E2B63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B91D2A1DF58666CADA6C328D /* Pods-MobiCX.debug.xcconfig */,
+				7DCC59B74517F721BCFE1025 /* Pods-MobiCX.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C584A3951F36788C00B08C93 = {
 			isa = PBXGroup;
 			children = (
+				C584A3D91F3688A400B08C93 /* Podfile */,
 				C584A3A01F36788C00B08C93 /* MobiCX */,
 				C584A3B51F36788C00B08C93 /* MobiCXTests */,
 				C584A3C01F36788C00B08C93 /* MobiCXUITests */,
@@ -90,6 +117,8 @@
 				C584A3CF1F36792200B08C93 /* .git */,
 				C584A3D01F36792200B08C93 /* .gitignore */,
 				C584A3D11F36792200B08C93 /* README.md */,
+				8CCED96B875C522CD12E2B63 /* Pods */,
+				14F251CB66CAB690C9903DA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +141,7 @@
 				C584A3A81F36788C00B08C93 /* Assets.xcassets */,
 				C584A3AA1F36788C00B08C93 /* LaunchScreen.storyboard */,
 				C584A3AD1F36788C00B08C93 /* Info.plist */,
+				C584A3D71F36821F00B08C93 /* APICommunicator.swift */,
 			);
 			path = MobiCX;
 			sourceTree = "<group>";
@@ -141,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C584A3C61F36788C00B08C93 /* Build configuration list for PBXNativeTarget "MobiCX" */;
 			buildPhases = (
+				20285C876447292B2B857B4B /* [CP] Check Pods Manifest.lock */,
 				C584A39A1F36788C00B08C93 /* Sources */,
 				C584A39B1F36788C00B08C93 /* Frameworks */,
 				C584A39C1F36788C00B08C93 /* Resources */,
+				F212589D3DF1735432628028 /* [CP] Embed Pods Frameworks */,
+				A4339AAF93CBB60BA4D961F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C584A3DA1F3688A400B08C93 /* Podfile in Resources */,
 				C584A3D31F36792200B08C93 /* .gitignore in Resources */,
 				C584A3AC1F36788C00B08C93 /* LaunchScreen.storyboard in Resources */,
 				C584A3A91F36788C00B08C93 /* Assets.xcassets in Resources */,
@@ -265,6 +299,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20285C876447292B2B857B4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobiCX-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4339AAF93CBB60BA4D961F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobiCX/Pods-MobiCX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F212589D3DF1735432628028 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MobiCX/Pods-MobiCX-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobiCX/Pods-MobiCX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C584A39A1F36788C00B08C93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,6 +361,7 @@
 				C584A3D41F36792200B08C93 /* README.md in Sources */,
 				C584A3A41F36788C00B08C93 /* ViewController.swift in Sources */,
 				C584A3A21F36788C00B08C93 /* AppDelegate.swift in Sources */,
+				C584A3D81F36821F00B08C93 /* APICommunicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,9 +513,11 @@
 		};
 		C584A3C71F36788C00B08C93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B91D2A1DF58666CADA6C328D /* Pods-MobiCX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobiCX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.derinozerman.MobiCX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,9 +527,11 @@
 		};
 		C584A3C81F36788C00B08C93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DCC59B74517F721BCFE1025 /* Pods-MobiCX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobiCX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.derinozerman.MobiCX;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,0 +1,6 @@
+framework module Pods_MobiCX {
+  umbrella header "Pods-MobiCX-umbrella.h"
+
+  export *
+  module * { export * }
+}
