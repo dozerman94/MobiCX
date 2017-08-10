@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		720F9C04EF1D819895A1ABDC /* Pods_MobiCX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3409C5761D5BFFCB8B53FA6 /* Pods_MobiCX.framework */; };
+		C5160F4E1F3C101100F55118 /* MobiCXViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5160F4D1F3C101100F55118 /* MobiCXViewControllerProtocol.swift */; };
+		C5160F501F3C160000F55118 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5160F4F1F3C160000F55118 /* TransactionsViewController.swift */; };
 		C584A3A21F36788C00B08C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584A3A11F36788C00B08C93 /* AppDelegate.swift */; };
-		C584A3A41F36788C00B08C93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584A3A31F36788C00B08C93 /* ViewController.swift */; };
+		C584A3A41F36788C00B08C93 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C584A3A31F36788C00B08C93 /* MainViewController.swift */; };
 		C584A3A71F36788C00B08C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C584A3A51F36788C00B08C93 /* Main.storyboard */; };
 		C584A3A91F36788C00B08C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C584A3A81F36788C00B08C93 /* Assets.xcassets */; };
 		C584A3AC1F36788C00B08C93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C584A3AA1F36788C00B08C93 /* LaunchScreen.storyboard */; };
@@ -42,9 +44,11 @@
 /* Begin PBXFileReference section */
 		7DCC59B74517F721BCFE1025 /* Pods-MobiCX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiCX.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobiCX/Pods-MobiCX.release.xcconfig"; sourceTree = "<group>"; };
 		B91D2A1DF58666CADA6C328D /* Pods-MobiCX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobiCX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobiCX/Pods-MobiCX.debug.xcconfig"; sourceTree = "<group>"; };
+		C5160F4D1F3C101100F55118 /* MobiCXViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiCXViewControllerProtocol.swift; sourceTree = "<group>"; };
+		C5160F4F1F3C160000F55118 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		C584A39E1F36788C00B08C93 /* MobiCX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobiCX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C584A3A11F36788C00B08C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C584A3A31F36788C00B08C93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C584A3A31F36788C00B08C93 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C584A3A61F36788C00B08C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C584A3A81F36788C00B08C93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C584A3AB1F36788C00B08C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -135,13 +139,15 @@
 		C584A3A01F36788C00B08C93 /* MobiCX */ = {
 			isa = PBXGroup;
 			children = (
-				C584A3A11F36788C00B08C93 /* AppDelegate.swift */,
-				C584A3A31F36788C00B08C93 /* ViewController.swift */,
-				C584A3A51F36788C00B08C93 /* Main.storyboard */,
 				C584A3A81F36788C00B08C93 /* Assets.xcassets */,
-				C584A3AA1F36788C00B08C93 /* LaunchScreen.storyboard */,
 				C584A3AD1F36788C00B08C93 /* Info.plist */,
+				C584A3AA1F36788C00B08C93 /* LaunchScreen.storyboard */,
+				C584A3A51F36788C00B08C93 /* Main.storyboard */,
+				C584A3A11F36788C00B08C93 /* AppDelegate.swift */,
+				C584A3A31F36788C00B08C93 /* MainViewController.swift */,
 				C584A3D71F36821F00B08C93 /* APICommunicator.swift */,
+				C5160F4D1F3C101100F55118 /* MobiCXViewControllerProtocol.swift */,
+				C5160F4F1F3C160000F55118 /* TransactionsViewController.swift */,
 			);
 			path = MobiCX;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 				TargetAttributes = {
 					C584A39D1F36788C00B08C93 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = J3L8UT9L7P;
 						ProvisioningStyle = Automatic;
 					};
 					C584A3B11F36788C00B08C93 = {
@@ -359,9 +366,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C584A3D41F36792200B08C93 /* README.md in Sources */,
-				C584A3A41F36788C00B08C93 /* ViewController.swift in Sources */,
+				C584A3A41F36788C00B08C93 /* MainViewController.swift in Sources */,
+				C5160F501F3C160000F55118 /* TransactionsViewController.swift in Sources */,
 				C584A3A21F36788C00B08C93 /* AppDelegate.swift in Sources */,
 				C584A3D81F36821F00B08C93 /* APICommunicator.swift in Sources */,
+				C5160F4E1F3C101100F55118 /* MobiCXViewControllerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +525,7 @@
 			baseConfigurationReference = B91D2A1DF58666CADA6C328D /* Pods-MobiCX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J3L8UT9L7P;
 				INFOPLIST_FILE = MobiCX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -530,6 +540,7 @@
 			baseConfigurationReference = 7DCC59B74517F721BCFE1025 /* Pods-MobiCX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J3L8UT9L7P;
 				INFOPLIST_FILE = MobiCX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

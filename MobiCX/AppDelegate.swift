@@ -31,14 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // TODO: Change the rootViewController tp downcast to a custom UIViewController subclass that all the view controllers in this project will inherit from, so that this functionality works in all view controllers.
 //        (window?.rootViewController as! ViewController).timer?.invalidate()
-        (window?.rootViewController as! ViewController).stopTimer()
+        (window?.rootViewController as! MainViewController).stopTimer()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
         
         // TODO: Change the rootViewController tp downcast to a custom UIViewController subclass that all the view controllers in this project will inherit from, so that this functionality works in all view controllers.
-        (window?.rootViewController as! ViewController).startTimer()
+        (window?.rootViewController as! MainViewController).startTimer()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

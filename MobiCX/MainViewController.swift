@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController, MobiCXViewControllerProtocol {
     
     var timer: Timer?
     
@@ -18,7 +18,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updatePrices()
         startTimer()
     }
     
@@ -34,12 +33,17 @@ class ViewController: UIViewController {
 //        print("reappearing")
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func startTimer() {
+        updatePrices()
         self.timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(updatePrices), userInfo: nil, repeats: true)
     }
     
@@ -47,7 +51,7 @@ class ViewController: UIViewController {
         self.timer?.invalidate()
     }
     
-    @objc private func updatePrices() {
+    @objc func updatePrices() {
         print("updating")
         APICommunicator.sharedInstance.getCurrentPrice(currencyPair: .BTCCAD, onCompletion: { (price: String) in
             DispatchQueue.main.async {
