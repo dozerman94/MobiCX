@@ -18,23 +18,17 @@ class MainViewController: UIViewController, MobiCXViewControllerProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         startTimer()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-//        self.timer?.invalidate()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-//        self.timer?.invalidate()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-//        print("reappearing")
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        super.viewWillDisappear(animated)
+        stopTimer()
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,7 +46,7 @@ class MainViewController: UIViewController, MobiCXViewControllerProtocol {
     }
     
     @objc func updatePrices() {
-        print("updating")
+        print("updating prices")
         APICommunicator.sharedInstance.getCurrentPrice(currencyPair: .BTCCAD, onCompletion: { (price: String) in
             DispatchQueue.main.async {
                 self.BTCCADPriceLabel.text = price

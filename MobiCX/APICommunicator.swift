@@ -33,6 +33,13 @@ class APICommunicator: NSObject {
         })
     }
     
+    func getRecentTransactions(currencyPair: currencyPair, onCompletion: @escaping (Array<JSON>) -> Void) {
+        let path = baseURL + "transactions?book=" + currencyPair.rawValue
+        makeHTTPGetRequest(path: path, onCompletion: { json in
+            onCompletion(json.arrayValue)
+        })
+    }
+    
     // MARK: Perform a GET Request
     private func makeHTTPGetRequest(path: String, onCompletion: @escaping (JSON) -> Void) {
         let request = URLRequest(url: URL(string: path)!)
@@ -41,6 +48,7 @@ class APICommunicator: NSObject {
         
         let task = session.dataTask(with: request, completionHandler: {data, response, error -> Void in
             if let jsonData = data {
+//                print(String.init(data: data!, encoding: String.Encoding.utf8)!)
                 let json:JSON = JSON(data: jsonData)
                 onCompletion(json)
             } else {
