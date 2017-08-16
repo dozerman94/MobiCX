@@ -9,8 +9,10 @@
 import UIKit
 import SwiftyJSON
 
-enum currencyPair: String {
+enum CurrencyPair: String {
     case BTCCAD = "btc_cad"
+    case BTCUSD = "btc_usd"
+    case ETHBTC = "eth_btc"
     case ETHCAD = "eth_cad"
 }
 
@@ -26,14 +28,14 @@ class APICommunicator: NSObject {
         })
     }
     
-    func getCurrentPrice(currencyPair: currencyPair, onCompletion: @escaping (String) -> Void) {
+    func getCurrentPrice(currencyPair: CurrencyPair, onCompletion: @escaping (String) -> Void) {
         let path = baseURL + "ticker?book=" + currencyPair.rawValue
         makeHTTPGetRequest(path: path, onCompletion: { json in
             onCompletion(json["last"].stringValue)
         })
     }
     
-    func getRecentTransactions(currencyPair: currencyPair, onCompletion: @escaping (Array<JSON>) -> Void) {
+    func getRecentTransactions(currencyPair: CurrencyPair, onCompletion: @escaping (Array<JSON>) -> Void) {
         let path = baseURL + "transactions?book=" + currencyPair.rawValue
         makeHTTPGetRequest(path: path, onCompletion: { json in
             onCompletion(json.arrayValue)

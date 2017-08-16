@@ -93,8 +93,16 @@
                             <outlet property="delegate" destination="4d6-ZA-jr6" id="ih1-be-bnx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Latest Transactions" id="Ftl-1M-wcr"/>
+                    <navigationItem key="navigationItem" title="Latest Transactions" id="Ftl-1M-wcr">
+                        <barButtonItem key="rightBarButtonItem" title="Currency" id="SEK-55-ld1">
+                            <connections>
+                                <action selector="currencySelectorTapped:" destination="4d6-ZA-jr6" id="Jiv-nY-gMe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="currencySelectButton" destination="SEK-55-ld1" id="Duf-Kd-cl4"/>
                         <outlet property="tableView" destination="YoN-fh-9vv" id="it0-AH-n8u"/>
                         <outlet property="transactionsTableView" destination="YoN-fh-9vv" id="UJQ-4o-Onh"/>
                     </connections>

@@ -3,4 +3,5 @@ use_frameworks!
 
 target 'MobiCX' do
     pod 'SwiftyJSON'
+    pod 'DropDown'
 end
